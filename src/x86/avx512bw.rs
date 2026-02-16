@@ -884,7 +884,6 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(miri, ignore)]
     fn test_mm_mask_cvtsepi16_storeu_epi8() {
         assert!(*CPU_HAS_AVX512BW);
         unsafe { test() }
@@ -900,7 +899,6 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(miri, ignore)]
     fn test_mm256_mask_cvtsepi16_storeu_epi8() {
         assert!(*CPU_HAS_AVX512BW);
         unsafe { test() }
@@ -936,7 +934,6 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(miri, ignore)]
     fn test_mm_mask_cvtusepi16_storeu_epi8() {
         assert!(*CPU_HAS_AVX512BW);
         unsafe { test() }
@@ -952,7 +949,6 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(miri, ignore)]
     fn test_mm256_mask_cvtusepi16_storeu_epi8() {
         assert!(*CPU_HAS_AVX512BW);
         unsafe { test() }
