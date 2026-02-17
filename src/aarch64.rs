@@ -894,37 +894,37 @@ mod tests {
         <[[T; M]; L]>::try_from(v.as_chunks::<M>().0).unwrap()
     }
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u8_x2, vld1_u8_x2, u8, arch::uint8x8x2_t, as_chunks::<_, 2, 16, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i8_x2, vld1_s8_x2, i8, arch::int8x8x2_t, as_chunks::<_, 2, 16, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u16_x2, vld1_u16_x2, u16, arch::uint16x4x2_t, as_chunks::<_, 2, 8, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i16_x2, vld1_s16_x2, i16, arch::int16x4x2_t, as_chunks::<_, 2, 8, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u32_x2, vld1_u32_x2, u32, arch::uint32x2x2_t, as_chunks::<_, 2, 4, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i32_x2, vld1_s32_x2, i32, arch::int32x2x2_t, as_chunks::<_, 2, 4, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f32_x2, vld1_f32_x2, f32, arch::float32x2x2_t, as_chunks::<_, 2, 4, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u64_x2, vld1_u64_x2, u64, arch::uint64x1x2_t);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i64_x2, vld1_s64_x2, i64, arch::int64x1x2_t);
+    test_vld1_from_slice!(fn test_vld1_u8_x2, vld1_u8_x2, u8, arch::uint8x8x2_t, as_chunks::<_, 2, 16, 8>);
+    test_vld1_from_slice!(fn test_vld1_i8_x2, vld1_s8_x2, i8, arch::int8x8x2_t, as_chunks::<_, 2, 16, 8>);
+    test_vld1_from_slice!(fn test_vld1_u16_x2, vld1_u16_x2, u16, arch::uint16x4x2_t, as_chunks::<_, 2, 8, 4>);
+    test_vld1_from_slice!(fn test_vld1_i16_x2, vld1_s16_x2, i16, arch::int16x4x2_t, as_chunks::<_, 2, 8, 4>);
+    test_vld1_from_slice!(fn test_vld1_u32_x2, vld1_u32_x2, u32, arch::uint32x2x2_t, as_chunks::<_, 2, 4, 2>);
+    test_vld1_from_slice!(fn test_vld1_i32_x2, vld1_s32_x2, i32, arch::int32x2x2_t, as_chunks::<_, 2, 4, 2>);
+    test_vld1_from_slice!(fn test_vld1_f32_x2, vld1_f32_x2, f32, arch::float32x2x2_t, as_chunks::<_, 2, 4, 2>);
+    test_vld1_from_slice!(fn test_vld1_u64_x2, vld1_u64_x2, u64, arch::uint64x1x2_t);
+    test_vld1_from_slice!(fn test_vld1_i64_x2, vld1_s64_x2, i64, arch::int64x1x2_t);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f64_x2, vld1_f64_x2, f64, arch::float64x1x2_t);
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u8_x3, vld1_u8_x3, u8, arch::uint8x8x3_t, as_chunks::<_, 3, 24, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i8_x3, vld1_s8_x3, i8, arch::int8x8x3_t, as_chunks::<_, 3, 24, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u16_x3, vld1_u16_x3, u16, arch::uint16x4x3_t, as_chunks::<_, 3, 12, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i16_x3, vld1_s16_x3, i16, arch::int16x4x3_t, as_chunks::<_, 3, 12, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u32_x3, vld1_u32_x3, u32, arch::uint32x2x3_t, as_chunks::<_, 3, 6, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i32_x3, vld1_s32_x3, i32, arch::int32x2x3_t, as_chunks::<_, 3, 6, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f32_x3, vld1_f32_x3, f32, arch::float32x2x3_t, as_chunks::<_, 3, 6, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u64_x3, vld1_u64_x3, u64, arch::uint64x1x3_t);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i64_x3, vld1_s64_x3, i64, arch::int64x1x3_t);
+    test_vld1_from_slice!(fn test_vld1_u8_x3, vld1_u8_x3, u8, arch::uint8x8x3_t, as_chunks::<_, 3, 24, 8>);
+    test_vld1_from_slice!(fn test_vld1_i8_x3, vld1_s8_x3, i8, arch::int8x8x3_t, as_chunks::<_, 3, 24, 8>);
+    test_vld1_from_slice!(fn test_vld1_u16_x3, vld1_u16_x3, u16, arch::uint16x4x3_t, as_chunks::<_, 3, 12, 4>);
+    test_vld1_from_slice!(fn test_vld1_i16_x3, vld1_s16_x3, i16, arch::int16x4x3_t, as_chunks::<_, 3, 12, 4>);
+    test_vld1_from_slice!(fn test_vld1_u32_x3, vld1_u32_x3, u32, arch::uint32x2x3_t, as_chunks::<_, 3, 6, 2>);
+    test_vld1_from_slice!(fn test_vld1_i32_x3, vld1_s32_x3, i32, arch::int32x2x3_t, as_chunks::<_, 3, 6, 2>);
+    test_vld1_from_slice!(fn test_vld1_f32_x3, vld1_f32_x3, f32, arch::float32x2x3_t, as_chunks::<_, 3, 6, 2>);
+    test_vld1_from_slice!(fn test_vld1_u64_x3, vld1_u64_x3, u64, arch::uint64x1x3_t);
+    test_vld1_from_slice!(fn test_vld1_i64_x3, vld1_s64_x3, i64, arch::int64x1x3_t);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f64_x3, vld1_f64_x3, f64, arch::float64x1x3_t);
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u8_x4, vld1_u8_x4, u8, arch::uint8x8x4_t, as_chunks::<_, 4, 32, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i8_x4, vld1_s8_x4, i8, arch::int8x8x4_t, as_chunks::<_, 4, 32, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u16_x4, vld1_u16_x4, u16, arch::uint16x4x4_t, as_chunks::<_, 4, 16, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i16_x4, vld1_s16_x4, i16, arch::int16x4x4_t, as_chunks::<_, 4, 16, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u32_x4, vld1_u32_x4, u32, arch::uint32x2x4_t, as_chunks::<_, 4, 8, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i32_x4, vld1_s32_x4, i32, arch::int32x2x4_t, as_chunks::<_, 4, 8, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f32_x4, vld1_f32_x4, f32, arch::float32x2x4_t, as_chunks::<_, 4, 8, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_u64_x4, vld1_u64_x4, u64, arch::uint64x1x4_t);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_i64_x4, vld1_s64_x4, i64, arch::int64x1x4_t);
+    test_vld1_from_slice!(fn test_vld1_u8_x4, vld1_u8_x4, u8, arch::uint8x8x4_t, as_chunks::<_, 4, 32, 8>);
+    test_vld1_from_slice!(fn test_vld1_i8_x4, vld1_s8_x4, i8, arch::int8x8x4_t, as_chunks::<_, 4, 32, 8>);
+    test_vld1_from_slice!(fn test_vld1_u16_x4, vld1_u16_x4, u16, arch::uint16x4x4_t, as_chunks::<_, 4, 16, 4>);
+    test_vld1_from_slice!(fn test_vld1_i16_x4, vld1_s16_x4, i16, arch::int16x4x4_t, as_chunks::<_, 4, 16, 4>);
+    test_vld1_from_slice!(fn test_vld1_u32_x4, vld1_u32_x4, u32, arch::uint32x2x4_t, as_chunks::<_, 4, 8, 2>);
+    test_vld1_from_slice!(fn test_vld1_i32_x4, vld1_s32_x4, i32, arch::int32x2x4_t, as_chunks::<_, 4, 8, 2>);
+    test_vld1_from_slice!(fn test_vld1_f32_x4, vld1_f32_x4, f32, arch::float32x2x4_t, as_chunks::<_, 4, 8, 2>);
+    test_vld1_from_slice!(fn test_vld1_u64_x4, vld1_u64_x4, u64, arch::uint64x1x4_t);
+    test_vld1_from_slice!(fn test_vld1_i64_x4, vld1_s64_x4, i64, arch::int64x1x4_t);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1_f64_x4, vld1_f64_x4, f64, arch::float64x1x4_t);
 
     test_vld1_from_slice!(fn test_vld1q_u8, vld1q_u8, u8, arch::uint8x16_t);
@@ -938,37 +938,37 @@ mod tests {
     test_vld1_from_slice!(fn test_vld1q_i64, vld1q_s64, i64, arch::int64x2_t);
     test_vld1_from_slice!(fn test_vld1q_f64, vld1q_f64, f64, arch::float64x2_t);
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u8_x2, vld1q_u8_x2, u8, arch::uint8x16x2_t, as_chunks::<_, 2, 32, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i8_x2, vld1q_s8_x2, i8, arch::int8x16x2_t, as_chunks::<_, 2, 32, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u16_x2, vld1q_u16_x2, u16, arch::uint16x8x2_t, as_chunks::<_, 2, 16, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i16_x2, vld1q_s16_x2, i16, arch::int16x8x2_t, as_chunks::<_, 2, 16, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u32_x2, vld1q_u32_x2, u32, arch::uint32x4x2_t, as_chunks::<_, 2, 8, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i32_x2, vld1q_s32_x2, i32, arch::int32x4x2_t, as_chunks::<_, 2, 8, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f32_x2, vld1q_f32_x2, f32, arch::float32x4x2_t, as_chunks::<_, 2, 8, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u64_x2, vld1q_u64_x2, u64, arch::uint64x2x2_t, as_chunks::<_, 2, 4, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i64_x2, vld1q_s64_x2, i64, arch::int64x2x2_t, as_chunks::<_, 2, 4, 2>);
+    test_vld1_from_slice!(fn test_vld1q_u8_x2, vld1q_u8_x2, u8, arch::uint8x16x2_t, as_chunks::<_, 2, 32, 16>);
+    test_vld1_from_slice!(fn test_vld1q_i8_x2, vld1q_s8_x2, i8, arch::int8x16x2_t, as_chunks::<_, 2, 32, 16>);
+    test_vld1_from_slice!(fn test_vld1q_u16_x2, vld1q_u16_x2, u16, arch::uint16x8x2_t, as_chunks::<_, 2, 16, 8>);
+    test_vld1_from_slice!(fn test_vld1q_i16_x2, vld1q_s16_x2, i16, arch::int16x8x2_t, as_chunks::<_, 2, 16, 8>);
+    test_vld1_from_slice!(fn test_vld1q_u32_x2, vld1q_u32_x2, u32, arch::uint32x4x2_t, as_chunks::<_, 2, 8, 4>);
+    test_vld1_from_slice!(fn test_vld1q_i32_x2, vld1q_s32_x2, i32, arch::int32x4x2_t, as_chunks::<_, 2, 8, 4>);
+    test_vld1_from_slice!(fn test_vld1q_f32_x2, vld1q_f32_x2, f32, arch::float32x4x2_t, as_chunks::<_, 2, 8, 4>);
+    test_vld1_from_slice!(fn test_vld1q_u64_x2, vld1q_u64_x2, u64, arch::uint64x2x2_t, as_chunks::<_, 2, 4, 2>);
+    test_vld1_from_slice!(fn test_vld1q_i64_x2, vld1q_s64_x2, i64, arch::int64x2x2_t, as_chunks::<_, 2, 4, 2>);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f64_x2, vld1q_f64_x2, f64, arch::float64x2x2_t, as_chunks::<_, 2, 4, 2>);
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u8_x3, vld1q_u8_x3, u8, arch::uint8x16x3_t,as_chunks::<_, 3, 48, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i8_x3, vld1q_s8_x3, i8, arch::int8x16x3_t, as_chunks::<_, 3, 48, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u16_x3, vld1q_u16_x3, u16, arch::uint16x8x3_t, as_chunks::<_, 3, 24, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i16_x3, vld1q_s16_x3, i16, arch::int16x8x3_t, as_chunks::<_, 3, 24, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u32_x3, vld1q_u32_x3, u32, arch::uint32x4x3_t, as_chunks::<_, 3, 12, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i32_x3, vld1q_s32_x3, i32, arch::int32x4x3_t, as_chunks::<_, 3, 12, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f32_x3, vld1q_f32_x3, f32, arch::float32x4x3_t, as_chunks::<_, 3, 12, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u64_x3, vld1q_u64_x3, u64, arch::uint64x2x3_t, as_chunks::<_, 3, 6, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i64_x3, vld1q_s64_x3, i64, arch::int64x2x3_t, as_chunks::<_, 3, 6, 2>);
+    test_vld1_from_slice!(fn test_vld1q_u8_x3, vld1q_u8_x3, u8, arch::uint8x16x3_t,as_chunks::<_, 3, 48, 16>);
+    test_vld1_from_slice!(fn test_vld1q_i8_x3, vld1q_s8_x3, i8, arch::int8x16x3_t, as_chunks::<_, 3, 48, 16>);
+    test_vld1_from_slice!(fn test_vld1q_u16_x3, vld1q_u16_x3, u16, arch::uint16x8x3_t, as_chunks::<_, 3, 24, 8>);
+    test_vld1_from_slice!(fn test_vld1q_i16_x3, vld1q_s16_x3, i16, arch::int16x8x3_t, as_chunks::<_, 3, 24, 8>);
+    test_vld1_from_slice!(fn test_vld1q_u32_x3, vld1q_u32_x3, u32, arch::uint32x4x3_t, as_chunks::<_, 3, 12, 4>);
+    test_vld1_from_slice!(fn test_vld1q_i32_x3, vld1q_s32_x3, i32, arch::int32x4x3_t, as_chunks::<_, 3, 12, 4>);
+    test_vld1_from_slice!(fn test_vld1q_f32_x3, vld1q_f32_x3, f32, arch::float32x4x3_t, as_chunks::<_, 3, 12, 4>);
+    test_vld1_from_slice!(fn test_vld1q_u64_x3, vld1q_u64_x3, u64, arch::uint64x2x3_t, as_chunks::<_, 3, 6, 2>);
+    test_vld1_from_slice!(fn test_vld1q_i64_x3, vld1q_s64_x3, i64, arch::int64x2x3_t, as_chunks::<_, 3, 6, 2>);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f64_x3, vld1q_f64_x3, f64, arch::float64x2x3_t, as_chunks::<_, 3, 6, 2>);
 
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u8_x4, vld1q_u8_x4, u8, arch::uint8x16x4_t, as_chunks::<_, 4, 64, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i8_x4, vld1q_s8_x4, i8, arch::int8x16x4_t, as_chunks::<_, 4, 64, 16>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u16_x4, vld1q_u16_x4, u16, arch::uint16x8x4_t, as_chunks::<_, 4, 32, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i16_x4, vld1q_s16_x4, i16, arch::int16x8x4_t, as_chunks::<_, 4, 32, 8>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u32_x4, vld1q_u32_x4, u32, arch::uint32x4x4_t, as_chunks::<_, 4, 16, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i32_x4, vld1q_s32_x4, i32, arch::int32x4x4_t, as_chunks::<_, 4, 16, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f32_x4, vld1q_f32_x4, f32, arch::float32x4x4_t, as_chunks::<_, 4, 16, 4>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_u64_x4, vld1q_u64_x4, u64, arch::uint64x2x4_t, as_chunks::<_, 4, 8, 2>);
-    test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_i64_x4, vld1q_s64_x4, i64, arch::int64x2x4_t, as_chunks::<_, 4, 8, 2>);
+    test_vld1_from_slice!(fn test_vld1q_u8_x4, vld1q_u8_x4, u8, arch::uint8x16x4_t, as_chunks::<_, 4, 64, 16>);
+    test_vld1_from_slice!(fn test_vld1q_i8_x4, vld1q_s8_x4, i8, arch::int8x16x4_t, as_chunks::<_, 4, 64, 16>);
+    test_vld1_from_slice!(fn test_vld1q_u16_x4, vld1q_u16_x4, u16, arch::uint16x8x4_t, as_chunks::<_, 4, 32, 8>);
+    test_vld1_from_slice!(fn test_vld1q_i16_x4, vld1q_s16_x4, i16, arch::int16x8x4_t, as_chunks::<_, 4, 32, 8>);
+    test_vld1_from_slice!(fn test_vld1q_u32_x4, vld1q_u32_x4, u32, arch::uint32x4x4_t, as_chunks::<_, 4, 16, 4>);
+    test_vld1_from_slice!(fn test_vld1q_i32_x4, vld1q_s32_x4, i32, arch::int32x4x4_t, as_chunks::<_, 4, 16, 4>);
+    test_vld1_from_slice!(fn test_vld1q_f32_x4, vld1q_f32_x4, f32, arch::float32x4x4_t, as_chunks::<_, 4, 16, 4>);
+    test_vld1_from_slice!(fn test_vld1q_u64_x4, vld1q_u64_x4, u64, arch::uint64x2x4_t, as_chunks::<_, 4, 8, 2>);
+    test_vld1_from_slice!(fn test_vld1q_i64_x4, vld1q_s64_x4, i64, arch::int64x2x4_t, as_chunks::<_, 4, 8, 2>);
     test_vld1_from_slice!(#[cfg_attr(miri, ignore)] fn test_vld1q_f64_x4, vld1q_f64_x4, f64, arch::float64x2x4_t, as_chunks::<_, 4, 8, 2>);
 
     // Generate a test for an intrinsic. The primary use of tests is that they execute under Miri,
